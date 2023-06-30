@@ -1,7 +1,7 @@
 import nltk
 from nltk.tokenize import sent_tokenize
 
-with open('reviews.txt', 'r', encoding='utf-8') as file:
+with open('reviews1.txt', 'r', encoding='utf-8') as file:
     reviews = file.read()
 
 sentences = sent_tokenize(reviews)
@@ -15,5 +15,5 @@ for sentence in sentences:
     if facts:
         features.append('• ' + ' '.join(facts))
 
-with open('features.txt', 'w', encoding='utf-8') as file:
+with open('features1.txt', 'w', encoding='utf-8') as file:
     file.write('\n'.join(features))
